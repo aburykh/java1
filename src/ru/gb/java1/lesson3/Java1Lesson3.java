@@ -119,11 +119,11 @@ public class Java1Lesson3 {
 //        return true;
 //    }
 
-    public static boolean checkWin() {
+    public static boolean checkWin(char c) {
         return checkHor() || checkVert() || checkDiag();
     }
 
-    public static boolean checkHor(int[][] a) {
+    public static boolean checkHor() {
         int [][] arr = new int[fieldSizeY][fieldSizeX];
         for (int i = 0; i < fieldSizeY; i++) {
             boolean bool = true;
@@ -135,7 +135,7 @@ public class Java1Lesson3 {
         return false;
     }
 
-    public static boolean checkVert(int[][] a) {
+    public static boolean checkVert() {
         int [][] arr = new int[fieldSizeY][fieldSizeX];
         for (int i = 0; i < fieldSizeX; i++) {
             boolean bool = true;
@@ -147,7 +147,7 @@ public class Java1Lesson3 {
         return false;
     }
 
-    public static boolean checkDiag(field) {
+    public static boolean checkDiag() {
         int [][] arr = new int[fieldSizeY][fieldSizeX];
         boolean bool = true;
         for (int i = 1; i < fieldSizeX && bool; i++)
