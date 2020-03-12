@@ -11,7 +11,7 @@ public class Java1Lesson3 {
 
     private static int fieldSizeX = 3;
     private static int fieldSizeY = 3;
-    private static int toWin = 3;
+    //private static int toWin = 3;
     private static char[][] field;
     private static int row;
     private static int col;
@@ -144,11 +144,11 @@ public class Java1Lesson3 {
 //        return false;
 //    }
 //
-    private static boolean checkWin() {
+    private static boolean checkWin(char dotHuman) {
         return checkVert(row, col, field) ||
                 checkHoriz(row, col, field); //||
-                //checkRightDiagonal(row, col, field) ||
-                //checkLeftDiagonal(row, col, field);
+                //checkRightDiag(row, col, field) ||
+                //checkLeftDiag(row, col, field);
     }
 //    private static boolean checkWin() {
 //        for (int i = 0; i < field.length; i++) {
@@ -213,7 +213,7 @@ public class Java1Lesson3 {
 //            bool = arr[fieldSizeY - i - 1][i] == arr[fieldSizeY - 1][0];
 //        return bool;
 //    }
-//    public static boolean checkLeftDiagonal(int i,int j, char[][] field){
+//    public static boolean checkLeftDiag(int i,int j, char[][] field){
 //        //if( i==1 && j==1 || i==0 && j==0 || i==0 && j=fieldSizeY-1 || i==fieldSizeX-1 && j==0 || i==fieldSizeX-1 && j=fieldSizeY-1 ) return false;
 //        int rows = field.length;
 //        for(int u =0; u < fieldSizeY; u ++) {
@@ -221,7 +221,7 @@ public class Java1Lesson3 {
 //        }
 //        return true;
 //    }
-//    public static boolean checkRightDiagonal(int i,int j, char[][] field) {
+//    public static boolean checkRightDiag(int i,int j, char[][] field) {
 //        //if( i==1 && j==1 || i==0 && j==0 || i==0 && j=fieldSizeY-1 || i==fieldSizeX-1 && j==0 || i==fieldSizeX-1 && j=fieldSizeY-1 ) return false;
 //        int rows = field.length;
 //        for (int r = 0; r < fieldSizeY; r++) {
@@ -246,7 +246,7 @@ public class Java1Lesson3 {
         while (true) {
             humanTurn();
             printField();
-            if (checkWin()) {
+            if (checkWin(DOT_HUMAN)) {
                 System.out.println("Выиграл игрок!");
                 break;
             }
