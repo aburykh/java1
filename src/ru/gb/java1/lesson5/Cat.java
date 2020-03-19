@@ -12,20 +12,16 @@ package ru.gb.java1.lesson5;
 
 public class Cat extends Animal {
 
-
-    public Cat (String name, String color, int age, int runDist, float jumpHeight) {
-        super(name, color, age, runDist, jumpHeight);
+    public Cat (String name, String color, int age, int runDist, float jumpLength) {
+        super(name, color, age, runDist, jumpLength);
     }
 
     public void info () {
         System.out.println(this.name + "'s color is " + this.color + " and he is " + this.age + " years old");
     }
 
-    public void run(int i) {
-        if (this.runDist >= i) {
-            System.out.println(this.name + " побежал на " + i + " метров");
-        } else {
-            System.out.println(this.name + " не может так далеко бежать");
-        }
+    @Override
+    public boolean swim(int s) {
+    System.out.println(this.name + " не умеет плавать :'(");  return false;
     }
 }

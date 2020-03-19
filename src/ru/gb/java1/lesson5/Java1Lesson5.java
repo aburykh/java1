@@ -13,7 +13,6 @@ package ru.gb.java1.lesson5;
 public class Java1Lesson5 {
 
     public static void main (String[] arg) {
-
         Bird bird = new Bird("Kesha", "blue", 1, 5, 0.2f);
         Cat cat = new Cat("Markiz", "black", 3, 200, 2);
         Dog dog = new Dog("Cooper", "white", 2, 500, 10, 0.5f);
@@ -23,44 +22,51 @@ public class Java1Lesson5 {
         Yorkshire yorkshire = new Yorkshire("Yalik", "brown", 16, 300, 12, 0.4f);
         Beagle beagle = new Beagle("Jonny", "black brown", 3, 900, 7, 1.2f);
 
-//        Animal[] zoo = {bird, cat, dog, horse, westie, yorkshire, beagle};
-//        for (int i = 0; i < zoo.length; i++) {
-//            zoo[i].run(550);
-//            System.out.println(zoo[i].getClass().getName());
-//            System.out.println();
-//        }
 
-        Dog[] dogs = {dog, westie, yorkshire, beagle};
-        for (int i = 0; i < dogs.length; i++) {
-            dogs[i].run(550);
-            System.out.println(dogs[i].getClass().getName());
+        System.out.println("\nШОУ-ПРОГРАММА ЗООПАРКА");
+        Animal[] zoo = {bird, cat, dog, horse, westie, yorkshire, beagle};
+        for (int i = 0; i < zoo.length; i++) {
+            zoo[i].info();
+            zoo[i].run(550);
+            zoo[i].swim(10);
+            zoo[i].jump(0.7f);
+            System.out.println(zoo[i].getClass().getName());
             System.out.println();
         }
 
+        System.out.println("\nЗАБЕГ ТОЛЬКО ПЁСИКОВ");
+        Dog[] dogs = {dog, westie, yorkshire, beagle};
+        for (int i = 0; i < dogs.length; i++) {
+            dogs[i].run(550);
+        }
 
-        bird.info();
-        cat.info();
-        dog.info();
-        horse.info();
-        //Westie.info();
-        System.out.println();
-
+/**
+        System.out.println("\nЗАБЕГ НА РАЗНЫЕ ДИСТАНЦИИ");
         bird.run(5);
         cat.run(1500);
         dog.run(150);
         horse.run(1500);
+        westie.run(300);
+        yorkshire.run(350);
+        beagle.run(450);
         System.out.println();
 
-        bird.swim(1);
+        System.out.println("\nЗАПЛЫВ НА РАЗНЫЕ ДИСТАНЦИИ");
+        bird.swim(100);
         cat.swim(1);
-        dog.swim(12);
-        horse.swim(90);
+        dog.swim(5);
+        horse.swim(100);
+        westie.swim(12);
+        yorkshire.swim(11);
+        beagle.swim(7);
         System.out.println();
 
+        System.out.println("\nПРЫЖКИ ЧЕРЕЗ РАЗНЫЕ ПРЕПЯТСТВИЯ");
         bird.jump(2);
         cat.jump(1);
         dog.jump(3);
         horse.jump(1.5f);
         System.out.println();
+ */
     }
 }

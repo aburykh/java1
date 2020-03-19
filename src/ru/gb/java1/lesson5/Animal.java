@@ -10,12 +10,13 @@
 
 package ru.gb.java1.lesson5;
 
-public class Animal {
+public abstract class Animal {
 
     protected String name;
     protected String color;
     protected int age;
     protected int runDist;
+    protected int swimDist;
     protected float jumpLength;
 
     public Animal(String name, String color, int age, int runDist, float jumpLength) {
@@ -24,27 +25,31 @@ public class Animal {
         this.age = age;
         this.runDist = runDist;
         this.jumpLength = jumpLength;
-
     }
 
-    public void run(int i) {
+    public abstract void info();
+
+    public boolean run(int i) {
         if (this.runDist >= i) {
-            System.out.println(this.name + " побежал на " + i + " метров");
+            System.out.println(this.name + " убежал на " + i + " метров"); return true;
         } else {
-            System.out.println(this.name + " не может так далеко бежать");
+            System.out.println(this.name + " не может так далеко бежать"); return false;
         }
     }
 
-    public void swim(int i) {
-//        if (this.swimDist >= i)
-        System.out.println(this.name + " can swim");
+    public boolean swim(int s) {
+        if (this.swimDist >= s) {
+            System.out.println(this.name + " уплыл на " + s + "м"); return true;
+        } else {
+            System.out.println(this.name + " барахтается в воде на месте, т.к. для него это слишком далеко"); return false;
+        }
     }
 
-    public void jump(float i) {
-        if (this.jumpLength >= i) {
-            System.out.println(this.name + " jumped the barrier");
+    public boolean jump(float j) {
+        if (this.jumpLength >= j) {
+            System.out.println(this.name + " перепрыгнул препятствие в " + j + "м"); return true;
         } else {
-            System.out.println("Too high for " + this.name + " to jump");
+            System.out.println("Для " + this.name + " препятсвие в " + j + "м слишком большое"); return false;
         }
     }
 }
