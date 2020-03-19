@@ -30,26 +30,32 @@ public abstract class Animal {
     public abstract void info();
 
     public boolean run(int i) {
+        boolean bool1 = false;
         if (this.runDist >= i) {
-            System.out.println(this.name + " убежал на " + i + " метров"); return true;
+            System.out.println(this.name + " убежал на " + i + " метров");
         } else {
-            System.out.println(this.name + " не может так далеко бежать"); return false;
+            System.out.println(this.name + " не может так далеко бежать");
         }
+        return bool1;
     }
 
     public boolean swim(int s) {
+        boolean bool2 = false;
         if (this.swimDist >= s) {
-            System.out.println(this.name + " уплыл на " + s + "м"); return true;
+            System.out.println(this.name + " уплыл на " + s + "м");
         } else {
-            System.out.println(this.name + " барахтается в воде на месте, т.к. для него это слишком далеко"); return false;
+            System.out.println(this.name + " барахтается в воде на месте, т.к. для него это слишком далеко");
         }
+        return bool2;
     }
 
     public boolean jump(float j) {
+        boolean bool3 = false;
         if (this.jumpLength >= j) {
-            System.out.println(this.name + " перепрыгнул препятствие в " + j + "м"); return true;
+            System.out.println(this.name + " перепрыгнул препятствие в " + j + "м");
         } else {
-            System.out.println("Для " + this.name + " препятсвие в " + j + "м слишком большое"); return false;
+            System.out.println("Для " + this.name + " препятсвие в " + j + "м слишком большое");
         }
+        return bool3;
     }
 }
