@@ -16,8 +16,4 @@ public class Dog extends Animal {
         super(name, color, age, runDist, jumpLength);
         this.swimDist = swimDist;
     }
-
-    public void info () {
-        System.out.println(this.name + "'s color is " + this.color + " and he is " + this.age + " years old");
-    }
 }

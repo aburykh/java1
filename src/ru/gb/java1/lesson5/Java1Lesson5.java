@@ -10,7 +10,9 @@
 
 package ru.gb.java1.lesson5;
 
-public class Java1Lesson5 {
+import com.sun.javafx.scene.web.Debugger;
+
+public abstract class Java1Lesson5 {
 
     public static void main (String[] arg) {
         Bird bird = new Bird("Kesha", "blue", 1, 5, 0.2f);
@@ -26,7 +28,7 @@ public class Java1Lesson5 {
         System.out.println("\nШОУ-ПРОГРАММА ЗООПАРКА");
         Animal[] zoo = {bird, cat, dog, horse, westie, yorkshire, beagle};
         for (int i = 0; i < zoo.length; i++) {
-            zoo[i].info();
+            System.out.println(zoo[i].info());
             zoo[i].run(550);
             zoo[i].swim(10);
             zoo[i].jump(0.7f);

@@ -16,10 +16,6 @@ public class Bird extends Animal {
         super(name, color, age, runDist, jumpLength);
     }
 
-    public void info () {
-        System.out.println(this.name + "'s color is " + this.color + " and he is " + this.age + " years old");
-    }
-
     @Override
     public boolean swim(int s) {
         System.out.println(this.name + " не умеет плавать :'(");  return false;

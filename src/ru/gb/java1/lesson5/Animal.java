@@ -27,7 +27,9 @@ public abstract class Animal {
         this.jumpLength = jumpLength;
     }
 
-    public abstract void info();
+    public String info () {
+        return this.name + "'s color is " + this.color + " and he is " + this.age + " years old";
+    }
 
     public boolean run(int i) {
         boolean bool1 = false;
