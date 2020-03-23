@@ -1,0 +1,1 @@
+All string literals in Java programs, such as {@code "abc"}, are implemented as instances of this class.
